@@ -1,0 +1,137 @@
+.hireMe-page {
+  height: 90vh;
+  width: 80vw;
+  background-image: url(../../images/mapTT.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10vh;
+  opacity: 0;
+}
+
+.hireMe-page .hire-info {
+  width: 23vw;
+  background-color: #0b0c0c;
+  height: 60vh;
+  margin-left: 20vw;
+  -webkit-box-shadow: 0px 0px 5px 7px rgba(11, 12, 12, 0.34);
+          box-shadow: 0px 0px 5px 7px rgba(11, 12, 12, 0.34);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hireMe-page .hire-info .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hireMe-page .hire-info .header span {
+  font-size: 5rem;
+}
+
+.hireMe-page .hire-info .social-btn {
+  width: 10vw;
+  height: 6vh;
+  margin-bottom: 3vh;
+  background-color: #112fd9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.hireMe-page .hire-info .social-btn i {
+  margin-left: 5%;
+}
+
+.hireMe-page .hire-info .social-btn.twitter {
+  background-color: #4090d4;
+}
+
+.hireMe-page .hire-info .social-btn.github {
+  background-color: #bebfc0;
+  color: #0b0c0c;
+}
+
+@media only screen and (max-width: 1024px) {
+  .hireMe-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 80vh;
+  }
+  .hireMe-page .hire-info {
+    width: 80vw;
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  .hireMe-page .hire-info .social-btn {
+    width: 34vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hireMe-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 80vh;
+  }
+  .hireMe-page .hire-info {
+    width: 80vw;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  .hireMe-page .hire-info .social-btn {
+    width: 34vw;
+  }
+}
+/*# sourceMappingURL=HireMe.css.map */

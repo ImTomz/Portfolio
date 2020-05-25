@@ -1,0 +1,151 @@
+.home-page {
+  width: 90vw;
+  max-height: 90vh;
+  overflow: hidden;
+  margin-top: 10vh;
+  opacity: 0;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .flex-container {
+    width: 70vw;
+    margin-left: 8vw;
+    border-bottom: #383838 1px solid;
+    justify-content: space-between;
+
+    .astronaut {
+      height: 65vh;
+      width: 35vw;
+      background-image: url(../../images/img.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 60vh;
+
+      .home-title {
+        font-size: 5rem;
+        width: 35vw;
+        line-height: 90px;
+        span {
+          margin-left: 1vw;
+        }
+      }
+    }
+  }
+
+  .boxes {
+    margin-left: 10vw;
+    width: 70vw;
+    height: 23vh;
+    padding: 3vh 0;
+    display: flex;
+    justify-content: space-between;
+    .box {
+      width: 20vw;
+      height: 20vh;
+      color: #383838;
+
+      span {
+        color: #112fd9;
+      }
+
+      &::before {
+        content: "";
+        visibility: hidden;
+        width: 40px;
+        height: 4px;
+        background-color: #112fd9;
+        position: absolute;
+        transform: translate(0px, -23px);
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 25px;
+        padding: 20px 0;
+      }
+    }
+
+    .box:hover {
+      color: #fff;
+      transition: color 500ms ease-in;
+      span {
+        color: #112fd9;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .home-page {
+    width: 100vw;
+
+    .flex-container {
+      width: 82vw;
+
+      .astronaut {
+        width: 90%;
+        height: 40vh;
+        position: relative;
+        transform: translate(0, 20vh);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .home-page {
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .flex-container {
+      justify-content: space-between;
+      flex-direction: column;
+      width: 80vw;
+      margin: 0;
+
+      .content {
+        height: 50vh;
+        justify-content: space-around;
+        .home-title {
+          font-size: 3rem;
+          width: 100%;
+          line-height: normal;
+        }
+      }
+    }
+    .boxes {
+      height: 40vh;
+      flex-direction: column;
+      margin: 0;
+      .box {
+        height: 10vh;
+        width: 100%;
+        justify-content: space-between;
+        h2 {
+          font-size: 1rem;
+        }
+        p {
+          width: 100%;
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+    }
+  }
+  .astronaut {
+    display: none;
+  }
+}

@@ -1,0 +1,134 @@
+.about-page {
+  width: 80vw;
+  height: 80vh;
+  margin-top: 10vh;
+  opacity: 0;
+
+  .about-content {
+    display: flex;
+    align-items: center;
+    height: 80vh;
+
+    .about-title {
+      font-size: 1.6rem;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .text {
+        padding-bottom: 3vh;
+        font-size: 1.3rem;
+      }
+
+      h1 {
+        padding: 5vh 0;
+        span {
+          margin-left: 1vw;
+        }
+      }
+
+      .emojis {
+        font-size: 1.2rem;
+        height: 20vh;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10vh;
+
+        .emojis-container {
+          height: 20vh;
+          width: 15vw;
+          display: flex;
+          justify-content: center;
+
+          ul {
+            list-style: none;
+
+            li {
+              padding: 0.5vh;
+
+              span {
+                padding: 0.7vw;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .about-text {
+      font-size: 1.5rem;
+    }
+
+    .satellite {
+      width: 50vw;
+      height: 70vh;
+      background-image: url("../../images/Satellite.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .about-page {
+    width: 100vw;
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .satellite {
+        width: 35vw;
+      }
+
+      .about-title {
+        display: flex;
+        width: 80%;
+
+        .emojis {
+          margin-top: 5vh;
+          .emojis-container {
+            width: 30vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about-page {
+    width: 100vw;
+    .about-content {
+      flex-direction: column;
+      .about-title {
+        height: 50vh;
+        width: 80vw;
+
+        .text {
+          font-size: 1.2rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .emojis {
+          margin-top: 4vh;
+          .emojis-container {
+            width: 40vw;
+            padding-top: 5vh;
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      .satellite {
+        display: none;
+      }
+    }
+  }
+}

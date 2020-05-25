@@ -1,0 +1,86 @@
+.left-nav {
+  width: 10vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5vw;
+  height: 90vh;
+  justify-content: space-around;
+  color: #fff;
+  margin-top: 10vh;
+  list-style: none;
+
+  li::before {
+    content: "";
+    background-color: #fff;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    z-index: 0;
+    position: absolute;
+    transform: translate(-17px, 7px);
+  }
+
+  a {
+    color: #383838;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 80%;
+    background-color: #383838;
+    margin-left: -16px;
+    z-index: -1;
+  }
+
+  .active-home {
+    & span {
+      visibility: hidden;
+    }
+    &::before {
+      content: "Home";
+      color: #fff;
+      font-size: 16px;
+    }
+  }
+
+  .active-works {
+    & span {
+      visibility: hidden;
+    }
+    &::before {
+      content: "Works";
+      color: #fff;
+      font-size: 16px;
+    }
+  }
+
+  .active-about {
+    & span {
+      visibility: hidden;
+    }
+    &::before {
+      content: "About";
+      color: #fff;
+      font-size: 16px;
+    }
+  }
+
+  .active-hire {
+    & span {
+      visibility: hidden;
+    }
+    &::before {
+      content: "Hire Me";
+      color: #fff;
+      font-size: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .left-nav {
+    display: none;
+  }
+}

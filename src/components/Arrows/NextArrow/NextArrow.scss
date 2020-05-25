@@ -1,0 +1,12 @@
+.next-arrow {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  cursor: pointer;
+  color: #383838;
+
+  &:hover {
+    color: #fff;
+    transition: color 100ms ease-in;
+  }
+}

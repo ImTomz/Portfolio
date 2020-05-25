@@ -1,0 +1,14 @@
+.next-arrow {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  cursor: pointer;
+  color: #383838;
+}
+
+.next-arrow:hover {
+  color: #fff;
+  -webkit-transition: color 100ms ease-in;
+  transition: color 100ms ease-in;
+}
+/*# sourceMappingURL=NextArrow.css.map */

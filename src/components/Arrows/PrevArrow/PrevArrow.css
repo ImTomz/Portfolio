@@ -1,0 +1,20 @@
+.prev-arrow {
+  position: absolute;
+  top: 50%;
+  left: -2%;
+  cursor: pointer;
+  color: #383838;
+}
+
+.prev-arrow:hover {
+  color: #fff;
+  -webkit-transition: color 100ms ease-in;
+  transition: color 100ms ease-in;
+}
+
+@media only screen and (max-width: 600px) {
+  .prev-arrow {
+    left: -5%;
+  }
+}
+/*# sourceMappingURL=PrevArrow.css.map */

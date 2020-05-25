@@ -1,0 +1,186 @@
+.home-page {
+  width: 90vw;
+  max-height: 90vh;
+  overflow: hidden;
+  margin-top: 10vh;
+  opacity: 0;
+}
+
+.home-page a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.home-page .flex-container {
+  width: 70vw;
+  margin-left: 8vw;
+  border-bottom: #383838 1px solid;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home-page .flex-container .astronaut {
+  height: 65vh;
+  width: 35vw;
+  background-image: url(../../images/img.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home-page .flex-container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 60vh;
+}
+
+.home-page .flex-container .content .home-title {
+  font-size: 5rem;
+  width: 35vw;
+  line-height: 90px;
+}
+
+.home-page .flex-container .content .home-title span {
+  margin-left: 1vw;
+}
+
+.home-page .boxes {
+  margin-left: 10vw;
+  width: 70vw;
+  height: 23vh;
+  padding: 3vh 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home-page .boxes .box {
+  width: 20vw;
+  height: 20vh;
+  color: #383838;
+}
+
+.home-page .boxes .box span {
+  color: #112fd9;
+}
+
+.home-page .boxes .box::before {
+  content: "";
+  visibility: hidden;
+  width: 40px;
+  height: 4px;
+  background-color: #112fd9;
+  position: absolute;
+  -webkit-transform: translate(0px, -23px);
+          transform: translate(0px, -23px);
+}
+
+.home-page .boxes .box p {
+  font-size: 16px;
+  line-height: 25px;
+  padding: 20px 0;
+}
+
+.home-page .boxes .box:hover {
+  color: #fff;
+  -webkit-transition: color 500ms ease-in;
+  transition: color 500ms ease-in;
+}
+
+.home-page .boxes .box:hover span {
+  color: #112fd9;
+}
+
+@media only screen and (max-width: 1024px) {
+  .home-page {
+    width: 100vw;
+  }
+  .home-page .flex-container {
+    width: 82vw;
+  }
+  .home-page .flex-container .astronaut {
+    width: 90%;
+    height: 40vh;
+    position: relative;
+    -webkit-transform: translate(0, 20vh);
+            transform: translate(0, 20vh);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .home-page {
+    width: 95vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .home-page .flex-container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80vw;
+    margin: 0;
+  }
+  .home-page .flex-container .content {
+    height: 50vh;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .home-page .flex-container .content .home-title {
+    font-size: 3rem;
+    width: 100%;
+    line-height: normal;
+  }
+  .home-page .boxes {
+    height: 40vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+  .home-page .boxes .box {
+    height: 10vh;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .home-page .boxes .box h2 {
+    font-size: 1rem;
+  }
+  .home-page .boxes .box p {
+    width: 100%;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .astronaut {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Home.css.map */

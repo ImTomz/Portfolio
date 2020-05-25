@@ -1,0 +1,70 @@
+.works-page {
+  width: 74vw;
+  text-align: center;
+  margin-top: 10vh;
+  opacity: 0;
+}
+
+.works-page .works-title {
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3vh 0;
+}
+
+.works-page .works-title span {
+  font-size: 2.5rem;
+  margin-left: 1vw;
+}
+
+.slider {
+  width: 75vw;
+  z-index: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .works-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 75vh;
+    width: 100vw;
+  }
+  .works-page .slider {
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .works-page {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+    height: 90vh;
+  }
+  .works-page .slider {
+    width: 80vw;
+  }
+}
+/*# sourceMappingURL=Works.css.map */

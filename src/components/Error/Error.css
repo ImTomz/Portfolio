@@ -1,0 +1,56 @@
+.error-page {
+  margin-top: 10vh;
+  width: 70vw;
+  height: 90vh;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.error-page .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30vh;
+}
+
+.error-page .flex h1 {
+  text-align: center;
+}
+
+.error-page .flex span {
+  font-size: 4rem;
+}
+
+.error-page .flex .back-btn {
+  background-color: #112fd9;
+  padding: 10px 30px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1024px) {
+  .error-page {
+    width: 100vw;
+  }
+}
+/*# sourceMappingURL=Error.css.map */

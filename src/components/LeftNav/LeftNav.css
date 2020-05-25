@@ -1,0 +1,90 @@
+.left-nav {
+  width: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 5vw;
+  height: 90vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #fff;
+  margin-top: 10vh;
+  list-style: none;
+}
+
+.left-nav li::before {
+  content: "";
+  background-color: #fff;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  z-index: 0;
+  position: absolute;
+  -webkit-transform: translate(-17px, 7px);
+          transform: translate(-17px, 7px);
+}
+
+.left-nav a {
+  color: #383838;
+}
+
+.left-nav::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 80%;
+  background-color: #383838;
+  margin-left: -16px;
+  z-index: -1;
+}
+
+.left-nav .active-home span {
+  visibility: hidden;
+}
+
+.left-nav .active-home::before {
+  content: "Home";
+  color: #fff;
+  font-size: 16px;
+}
+
+.left-nav .active-works span {
+  visibility: hidden;
+}
+
+.left-nav .active-works::before {
+  content: "Works";
+  color: #fff;
+  font-size: 16px;
+}
+
+.left-nav .active-about span {
+  visibility: hidden;
+}
+
+.left-nav .active-about::before {
+  content: "About";
+  color: #fff;
+  font-size: 16px;
+}
+
+.left-nav .active-hire span {
+  visibility: hidden;
+}
+
+.left-nav .active-hire::before {
+  content: "Hire Me";
+  color: #fff;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .left-nav {
+    display: none;
+  }
+}
+/*# sourceMappingURL=LeftNav.css.map */
