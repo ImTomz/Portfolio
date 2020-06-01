@@ -53,8 +53,13 @@ function App() {
           break;
 
         case "/":
-          return null;
-
+          history.push("/hire");
+          setScrolled(true);
+          setPage("/hire");
+          setTimeout(() => {
+            setScrolled(false);
+          }, 1200);
+          break;
         default:
           break;
       }
@@ -92,7 +97,13 @@ function App() {
           break;
 
         case "/hire":
-          return null;
+          history.push("/");
+          setScrolled(true);
+          setPage("/");
+          setTimeout(() => {
+            setScrolled(false);
+          }, 1200);
+          break;
 
         default:
           break;
