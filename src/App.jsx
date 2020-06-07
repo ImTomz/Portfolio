@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import "./style/style.css";
-import { Switch, Route, useHistory } from "react-router-dom";
+import { Switch, Route, useHistory, withRouter } from "react-router-dom";
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
-import Work from "./components/Works/Works";
+import Works from "./components/Works/Works";
 import LeftNav from "./components/LeftNav/LeftNav";
 import Header from "./components/Header/Header";
 import HireMe from "./components/HireMe/HireMe";
 import BurgerNav from "./components/BurgerNav/BurgerNav";
 import Error from "./components/Error/Error";
+import { CSSTransition } from "react-transition-group";
 
 function App() {
   //Page showing state
@@ -19,6 +20,14 @@ function App() {
   const [burgerPressed, setBurgerPressed] = useState(false);
   //History of router
   const history = useHistory();
+
+  const routes = [
+    { path: "/", name: "Home", Component: Home },
+    { path: "/about", name: "About", Component: About },
+    { path: "/works", name: "Works", Component: Works },
+    { path: "/hire", name: "Hire", Component: HireMe },
+    { path: "/*/:?", name: "Error", Component: Error },
+  ];
 
   //Scrolling trough routs
   const handleScroll = (event) => {
@@ -125,6 +134,13 @@ function App() {
     setBurgerPressed(!burgerPressed);
   };
 
+  const onEnter = (node) => {
+    console.log(node);
+  };
+  const onExit = (node) => {
+    console.log(node);
+  };
+
   return (
     <div className="App" onWheel={handleScroll}>
       {burgerPressed && <BurgerNav onChangePage={handleChange} />}
@@ -135,28 +151,26 @@ function App() {
       />
       <div className="flex-container">
         <LeftNav onChangePage={handleChange} />
-        <div>
-          <Switch>
-            <Route
-              path="/"
-              exact
-              render={() => <Home onChangePage={handleChange} />}
-            />
-            <Route
-              path="/about"
-              render={() => <About onChangePage={handleChange} />}
-            />
-            <Route
-              path="/works"
-              render={() => <Work onChangePage={handleChange} />}
-            />
-            <Route
-              path="/hire"
-              render={() => <HireMe onChangePage={handleChange} />}
-            />
-            <Route component={Error} />
-          </Switch>
-        </div>
+        <>
+          {routes.map(({ path, Component }) => (
+            <Route key={path} exact path={path}>
+              {({ match }) => (
+                <CSSTransition
+                  in={match != null}
+                  timeout={300}
+                  classNames="fade"
+                  onEnter={onEnter}
+                  onExit={onExit}
+                  unmountOnExit
+                >
+                  <div className="fade">
+                    <Component onChangePage={handleChange} />
+                  </div>
+                </CSSTransition>
+              )}
+            </Route>
+          ))}
+        </>
       </div>
     </div>
   );

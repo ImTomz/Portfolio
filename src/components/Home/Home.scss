@@ -1,28 +1,23 @@
 .home-page {
-  width: 90vw;
+  width: 100%;
   max-height: 90vh;
-  overflow: hidden;
-  margin-top: 10vh;
-  opacity: 0;
+  // overflow: hidden;
+  margin-left: 5vw;
 
   a {
     color: #fff;
     text-decoration: none;
   }
 
-  .flex-container {
+  .home-flex-container {
     width: 70vw;
-    margin-left: 8vw;
+    display: flex;
     border-bottom: #383838 1px solid;
     justify-content: space-between;
 
     .astronaut {
-      height: 65vh;
-      width: 35vw;
-      background-image: url(../../images/img.png);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      height: auto;
+      max-width: 35vw;
     }
 
     .content {
@@ -43,7 +38,6 @@
   }
 
   .boxes {
-    margin-left: 10vw;
     width: 70vw;
     height: 23vh;
     padding: 3vh 0;

@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./Home.css";
 import HireBtn from "../HireBtn/HireBtn";
 import { TweenMax, Power3 } from "gsap";
+import Astronaut from "../../images/img.png";
 
 const Home = ({ onChangePage }) => {
   //Ref for home page
@@ -24,7 +25,7 @@ const Home = ({ onChangePage }) => {
         homePage = el;
       }}
     >
-      <div className="flex-container">
+      <div className="home-flex-container">
         <div className="content">
           <h1 className="home-title">
             Welcome on my page
@@ -34,7 +35,9 @@ const Home = ({ onChangePage }) => {
           </h1>
           <HireBtn />
         </div>
-        <div className="astronaut"></div>
+        <div className="astronaut">
+          <img src={Astronaut} alt="astronaut" />
+        </div>
       </div>
       <div className="boxes">
         <div className="box">

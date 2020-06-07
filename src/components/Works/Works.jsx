@@ -20,8 +20,6 @@ const Works = ({ onChangePage }) => {
   useEffect(() => {
     //Setting title
     document.title = "Works - Tomáš Boďa";
-    //Fade in animation
-    TweenMax.to(WorksPage, 1, { opacity: 1, ease: Power3.easeIn });
     //Setting state on reload
     onChangePage("/works");
   }, []); // eslint-disable-line

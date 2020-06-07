@@ -1,9 +1,7 @@
 .home-page {
-  width: 90vw;
+  width: 100%;
   max-height: 90vh;
-  overflow: hidden;
-  margin-top: 10vh;
-  opacity: 0;
+  margin-left: 5vw;
 }
 
 .home-page a {
@@ -11,25 +9,23 @@
   text-decoration: none;
 }
 
-.home-page .flex-container {
+.home-page .home-flex-container {
   width: 70vw;
-  margin-left: 8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border-bottom: #383838 1px solid;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.home-page .flex-container .astronaut {
-  height: 65vh;
-  width: 35vw;
-  background-image: url(../../images/img.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.home-page .home-flex-container .astronaut {
+  height: auto;
+  max-width: 35vw;
 }
 
-.home-page .flex-container .content {
+.home-page .home-flex-container .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,18 +38,17 @@
   height: 60vh;
 }
 
-.home-page .flex-container .content .home-title {
+.home-page .home-flex-container .content .home-title {
   font-size: 5rem;
   width: 35vw;
   line-height: 90px;
 }
 
-.home-page .flex-container .content .home-title span {
+.home-page .home-flex-container .content .home-title span {
   margin-left: 1vw;
 }
 
 .home-page .boxes {
-  margin-left: 10vw;
   width: 70vw;
   height: 23vh;
   padding: 3vh 0;

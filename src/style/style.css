@@ -16,10 +16,38 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 10vh;
+  height: 90vh;
+  width: 100vw;
 }
 
 a {
   color: #fff;
   text-decoration: none;
+}
+
+.fade {
+  position: absolute;
+  left: 14%;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  -webkit-transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in;
 }
 /*# sourceMappingURL=style.css.map */

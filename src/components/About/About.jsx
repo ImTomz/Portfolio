@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { TweenMax, Power3 } from "gsap";
 import HireBtn from "../HireBtn/HireBtn";
+import Satellite from "../../images/Satellite.png";
 import "./About.css";
 
 const About = ({ onChangePage }) => {
@@ -11,8 +12,6 @@ const About = ({ onChangePage }) => {
   useEffect(() => {
     //Setting title of site
     document.title = "About - Tomáš Boďa";
-    //Animation
-    TweenMax.to(AboutPage, 1, { opacity: 1, ease: Power3.easeIn });
     //Setting state on reload page
     onChangePage("/about");
   }, []); // eslint-disable-line
@@ -113,7 +112,9 @@ const About = ({ onChangePage }) => {
               </div>
             </div>
           </div>
-          <div className="satellite"></div>
+          <div className="satellite">
+            <img src={Satellite} alt="satellite" />
+          </div>
         </div>
       </div>
     </div>

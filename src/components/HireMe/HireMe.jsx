@@ -10,8 +10,6 @@ const HireMe = ({ onChangePage }) => {
   useEffect(() => {
     //Setting title
     document.title = "Hire - Tomáš Boďa";
-    //Fade in animation
-    TweenMax.to(HirePage, 1, { opacity: 1, ease: Power3.easeIn });
     //Set state on reload
     onChangePage("/hire");
   }, []); // eslint-disable-line

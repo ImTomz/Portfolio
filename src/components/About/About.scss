@@ -1,8 +1,6 @@
 .about-page {
   width: 80vw;
   height: 80vh;
-  margin-top: 10vh;
-  opacity: 0;
 
   .about-content {
     display: flex;
@@ -61,12 +59,12 @@
     }
 
     .satellite {
-      width: 50vw;
+      width: 45vw;
       height: 70vh;
-      background-image: url("../../images/Satellite.png");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
+      img {
+        width: 45vw;
+        height: auto;
+      }
     }
   }
 }
