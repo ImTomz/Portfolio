@@ -15,14 +15,11 @@
   display: -ms-flexbox;
   display: flex;
   border-bottom: #383838 1px solid;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-.home-page .home-flex-container .astronaut {
-  height: auto;
-  max-width: 35vw;
+.home-page .home-flex-container .astronaut img {
+  height: 100%;
+  width: auto;
 }
 
 .home-page .home-flex-container .content {

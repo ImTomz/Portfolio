@@ -26,7 +26,6 @@ function App() {
     { path: "/about", name: "About", Component: About },
     { path: "/works", name: "Works", Component: Works },
     { path: "/hire", name: "Hire", Component: HireMe },
-    { path: "/*/:?", name: "Error", Component: Error },
   ];
 
   //Scrolling trough routs

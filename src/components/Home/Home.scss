@@ -1,7 +1,6 @@
 .home-page {
   width: 100%;
   max-height: 90vh;
-  // overflow: hidden;
   margin-left: 5vw;
 
   a {
@@ -13,11 +12,12 @@
     width: 70vw;
     display: flex;
     border-bottom: #383838 1px solid;
-    justify-content: space-between;
 
     .astronaut {
-      height: auto;
-      max-width: 35vw;
+      img {
+        height: 100%;
+        width: auto;
+      }
     }
 
     .content {
