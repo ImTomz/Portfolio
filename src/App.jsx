@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style/style.css";
-import { Switch, Route, useHistory, withRouter } from "react-router-dom";
+import { Route, Switch, useHistory, withRouter } from "react-router-dom";
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
 import Works from "./components/Works/Works";
@@ -9,9 +9,10 @@ import Header from "./components/Header/Header";
 import HireMe from "./components/HireMe/HireMe";
 import BurgerNav from "./components/BurgerNav/BurgerNav";
 import Error from "./components/Error/Error";
-import { CSSTransition } from "react-transition-group";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import gsap from "gsap";
 
-function App() {
+const App = withRouter(({ location }) => {
   //Page showing state
   const [page, setPage] = useState("/");
   //Can scroll state 1.2s timeout set in handleScroll
@@ -20,13 +21,6 @@ function App() {
   const [burgerPressed, setBurgerPressed] = useState(false);
   //History of router
   const history = useHistory();
-
-  const routes = [
-    { path: "/", name: "Home", Component: Home },
-    { path: "/about", name: "About", Component: About },
-    { path: "/works", name: "Works", Component: Works },
-    { path: "/hire", name: "Hire", Component: HireMe },
-  ];
 
   //Scrolling trough routs
   const handleScroll = (event) => {
@@ -133,13 +127,6 @@ function App() {
     setBurgerPressed(!burgerPressed);
   };
 
-  const onEnter = (node) => {
-    console.log(node);
-  };
-  const onExit = (node) => {
-    console.log(node);
-  };
-
   return (
     <div className="App" onWheel={handleScroll}>
       {burgerPressed && <BurgerNav onChangePage={handleChange} />}
@@ -150,29 +137,35 @@ function App() {
       />
       <div className="flex-container">
         <LeftNav onChangePage={handleChange} />
-        <>
-          {routes.map(({ path, Component }) => (
-            <Route key={path} exact path={path}>
-              {({ match }) => (
-                <CSSTransition
-                  in={match != null}
-                  timeout={300}
-                  classNames="fade"
-                  onEnter={onEnter}
-                  onExit={onExit}
-                  unmountOnExit
-                >
-                  <div className="fade">
-                    <Component onChangePage={handleChange} />
-                  </div>
-                </CSSTransition>
-              )}
-            </Route>
-          ))}
-        </>
+        <TransitionGroup className="transition">
+          <CSSTransition
+            key={location.key}
+            classNames="fade"
+            timeout={400}
+            unmountOnExit
+          >
+            <Switch location={location}>
+              <Route exact path="/">
+                <Home onChangePage={handleChange} />
+              </Route>
+              <Route exact path="/works">
+                <Works onChangePage={handleChange} />
+              </Route>
+              <Route exact path="/about">
+                <About onChangePage={handleChange} />
+              </Route>
+              <Route exact path="/hire">
+                <HireMe onChangePage={handleChange} />
+              </Route>
+              <Route path="/*">
+                <Error onChangePage={handleChange} />
+              </Route>
+            </Switch>
+          </CSSTransition>
+        </TransitionGroup>
       </div>
     </div>
   );
-}
+});
 
 export default App;

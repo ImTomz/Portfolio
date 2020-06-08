@@ -1,30 +1,19 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import HireBtn from "../HireBtn/HireBtn";
-import { TweenMax, Power3 } from "gsap";
 import Astronaut from "../../images/img.png";
 
 const Home = ({ onChangePage }) => {
-  //Ref for home page
-  let homePage = useRef();
-
   //Mounting hook
   useEffect(() => {
     //Set tittle
     document.title = "Tomáš Boďa";
-    //Fade in animation
-    TweenMax.to(homePage, 1, { opacity: 1, ease: Power3.easeIn });
     //Setting state on redirect
     onChangePage("/");
   }, []); // eslint-disable-line
 
   return (
-    <div
-      className="home-page "
-      ref={(el) => {
-        homePage = el;
-      }}
-    >
+    <div className="home-page ">
       <div className="home-flex-container">
         <div className="content">
           <h1 className="home-title">

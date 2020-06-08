@@ -17,8 +17,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding-top: 10vh;
-  height: 90vh;
+  min-height: 90vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 a {
@@ -26,28 +27,41 @@ a {
   text-decoration: none;
 }
 
+.transition {
+  height: 90vh;
+}
+
 .fade {
   position: absolute;
-  left: 14%;
 }
 
 .fade-enter {
   opacity: 0.01;
+  position: absolute;
+  top: 10;
+  left: 14;
 }
 
 .fade-enter.fade-enter-active {
   opacity: 1;
-  -webkit-transition: opacity 300ms ease-in;
-  transition: opacity 300ms ease-in;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
 }
 
 .fade-exit {
   opacity: 1;
+  position: absolute;
 }
 
 .fade-exit.fade-exit-active {
   opacity: 0.01;
-  -webkit-transition: opacity 300ms ease-in;
-  transition: opacity 300ms ease-in;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+
+@media only screen and (max-width: 1024px) {
+  .fade-enter {
+    left: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

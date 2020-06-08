@@ -1,7 +1,7 @@
 .home-page {
-  width: 100%;
   max-height: 90vh;
-  margin-left: 5vw;
+  width: 80vw;
+  margin-left: 3vw;
 }
 
 .home-page a {
@@ -97,6 +97,7 @@
 @media only screen and (max-width: 1024px) {
   .home-page {
     width: 100vw;
+    margin-left: 0;
   }
   .home-page .flex-container {
     width: 82vw;
@@ -127,7 +128,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .home-page .flex-container {
+  .home-page .home-flex-container {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -138,12 +139,12 @@
     width: 80vw;
     margin: 0;
   }
-  .home-page .flex-container .content {
+  .home-page .home-flex-container .content {
     height: 50vh;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  .home-page .flex-container .content .home-title {
+  .home-page .home-flex-container .content .home-title {
     font-size: 3rem;
     width: 100%;
     line-height: normal;

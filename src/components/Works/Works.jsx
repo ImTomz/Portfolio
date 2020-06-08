@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { TweenMax, Power3 } from "gsap";
+import React, { useEffect } from "react";
+
 import Slider from "react-slick";
 import WorksBox from "../WorksBox/WorksBox";
 import "slick-carousel/slick/slick.css";
@@ -13,9 +13,6 @@ import NextArrow from "../Arrows/NextArrow/NextArrow";
 import PrevArrow from "../Arrows/PrevArrow/PrevArrow";
 
 const Works = ({ onChangePage }) => {
-  //Ref for work page
-  let WorksPage = useRef();
-
   //Mounting hook
   useEffect(() => {
     //Setting title
@@ -61,7 +58,7 @@ const Works = ({ onChangePage }) => {
   };
 
   return (
-    <div className="works-page" ref={(el) => (WorksPage = el)}>
+    <div className="works-page">
       <div className="works-title">
         <h1>Works</h1>
         <span role="img" aria-label="label">
